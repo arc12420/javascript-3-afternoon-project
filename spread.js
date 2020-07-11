@@ -18,7 +18,7 @@ let product = {
 }
 
 // code here
-
+const productCopy = Object.assign({}, product)
 
 
 
@@ -30,6 +30,7 @@ let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 
 // code here
 
+const colorsCopy = Object.assign({}, colors)
 
 
 
@@ -41,8 +42,10 @@ let numbers = [4, 6, 10];
 
 function addNums(num1, num2, num3) {
   return num1 + num2 + num3;
+  
 }
-
+// let addNums = Object .assign({result}...addNums[])
+const result = addNums(4,6,10)
 // code here
 
 
@@ -54,3 +57,4 @@ let arr1 = ['dog', 'chameleon', 'monkey'];
 let arr2 = ['bear', 'tiger', 'liger'];
 
 // code here
+const combinedArrays = [...arr1,...arr2]

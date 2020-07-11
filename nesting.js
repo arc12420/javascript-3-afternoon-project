@@ -163,12 +163,17 @@ var myCar = {
 */
 
 //Code Here
-function recordCleaner(){
-  for(let i = 0; i < myCar.accidents.length; i++){
-    if(accidents.atFaultForAccident === true){
-  
 
+const recordCleaner = () => {
+  for(let i = 0; i< myCar.accidents.length; i++){
+    if (myCar.accidents[i].atFaultForAccident === true){
+      myCar.accidents[i].atFaultForAccident = false
+    }
+  }
+}
 
+  recordCleaner()
+  // nbcHits.parksAndRec.characters[1].name
 ////////// PROBLEM 5 //////////
 
 // Do not edit the code below.
@@ -186,6 +191,70 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 
 //Code Here
 
-function looper(){
 
+const looper = () => {
+  for (let i = 0; i < numsArr.length; i++){
+    for (let j = 0; j < numsArr[i].length; j++){
+      if (numsArr[i][j] % 2 == 0) {
+        numsArr[i].splice (j, 1, 'even')
+      } else {
+        numsArr[i].splice (j, 1, "odd")
+      }
+    }
+  }
+  return numsArr
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function looper(){
+//   for(i = 0; i > numsArr[0].length; i++){
+//     if(i % 2 === 0){
+//       [i].splice(0, 1, even) {
+//         if(i % 3 === 0){
+//           [i].splice(0, 1, Odd)
+//         }
+//       }
+//     }
+//   }
+
+//   for(i = 0; i > numsArr[1].length; i++){
+//     if(i % 2 === 0){
+//       [i].splice(0, 1, even) && {
+//         if(i % 3 === 0){
+//           [i].splice(0, 1, Odd)
+//         }
+//       }
+//     }
+//   }
+
+//   for(i = 0; i > numsArr[2].length; i++) {
+//     if(i % 2 === 0){
+//       [i].splice(0, 1, even) && {
+//         if(i % 3 === 0){
+//           [i].splice(0, 1, Odd)
+//         }
+//       }
+//     }
+//     return numsArr
+// }
